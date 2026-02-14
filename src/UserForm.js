@@ -1,4 +1,4 @@
-import {Grid, Typography } from "@mui/material";
+import { Grid, TextField, Typography, Button } from "@mui/material";
 
 const UserForm = props => {
     return (
@@ -16,7 +16,7 @@ const UserForm = props => {
                 <Typography component={'h1'} sx={{ color: '#000000' }}>User Form</Typography>
             </Grid>
 
-            <Grid item xs={12} sm={6} sx={{display: 'flex'}}>
+            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
                 <Typography
 
                     component={'label'}
@@ -26,23 +26,22 @@ const UserForm = props => {
                         marginRight: '20px',
                         fontSize: '16px',
                         width: '100px',
-                        display: 'block'
                     }}
                 >
                     ID
                 </Typography>
 
-                <input
+                <TextField
                     type="number"
                     id="id"
                     name="id"
-                    sx={{width: '480px'}}
+                    sx={{ width: '480px' }}
                     value={''}
-                    onChange={e => {}} 
+                    onChange={e => { }}
                 />
-                
+
             </Grid>
-            <Grid item xs={12} sm={6} sx={{display: 'flex'}}>
+            <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
                 <Typography
 
                     component={'label'}
@@ -52,40 +51,40 @@ const UserForm = props => {
                         marginRight: '20px',
                         fontSize: '16px',
                         width: '100px',
-                        display: 'block'
                     }}
                 >
                     Name
                 </Typography>
 
-                <input
+                <TextField
                     type="text"
                     id="name"
                     name="name"
-                    sx={{width: '480px'}}
+                    sx={{ width: '480px' }}
                     value={''}
-                    onChange={e => {}} 
+                    onChange={e => { }}
                 />
-                
+
+            </Grid>
+            <Grid item xs={12}>
+                <Button
+                    sx={{
+                        margin: 'auto',
+                        marginBottom: '20px',
+                        backgroundColor: '#00c6e6',
+                        color: '#000000',
+                        marginLeft: '15px',
+                        marginTop: '20px',
+                        '&:hover': {
+                            opacity: '0.7',
+                            backgroundColor: '#00c6e6',
+                        }
+                    }}
+                >
+                    Add
+                </Button>
             </Grid>
 
-            <button
-                sx={{
-                    margin: 'auto',
-                    marginBottom: '20px',
-                    backgroundColor: '#00c6e6',
-                    color: '#000000',
-                    marginLeft: '15px',
-                    marginTop: '20px',
-                    '&:hover': {
-                        opacity: '0.7',
-                        backgroundColor: '#00c6e6',
-                    }
-                }}
-            >
-                Add
-            </button>
-            
         </Grid >
     );
 }
